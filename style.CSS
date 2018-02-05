@@ -1,0 +1,13 @@
+body {
+    background-color: gray;
+}
+
+.first_class {
+  color: blue;
+  font-size: 0.5em;
+  text-align: left;
+}
+
+#first_id{
+  text-decoration:none;
+}
