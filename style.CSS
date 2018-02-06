@@ -1,13 +1,19 @@
 body {
-    background-color: gray;
+    background-color: LightGray;
 }
 
-.first_class {
+a{
+  text-decoration:none;
+}
+
+.first_class p{
   color: blue;
   font-size: 0.5em;
   text-align: left;
 }
 
-#first_id{
-  text-decoration:none;
+#first_id p{
+  font-family: sans-serif;
+  color: BlueViolet;
+  text-align: left;
 }
