@@ -14,13 +14,12 @@ a {
   text-transform: uppercase;
 }
 
-.first_class p{
+.first_class {
   color: blue;
   text-align: left;
 }
 
 #first_id {
-  font-style: cursive;
   color: BlueViolet;
   text-align: center;
 }
