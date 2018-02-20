@@ -23,3 +23,10 @@ a {
   color: BlueViolet;
   text-align: center;
 }
+
+img {
+  height: 300px;
+  width: 300px;
+  max-width: 40%;
+  max-height: 40%;
+}
