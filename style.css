@@ -19,6 +19,16 @@ a {
   text-align: left;
 }
 
+.second_class {
+  color: green;
+  text-align: left;
+}
+
+.third_class {
+  color: red;
+  text-align: left;
+}
+
 #first_id {
   color: BlueViolet;
   text-align: center;
