@@ -50,22 +50,3 @@ img {
   max-width: 40%;
   max-height: 40%;
 }
-
-/* Display article thumbnails and descriptions side by side in a grid */
-article {
-  display: grid;
-  grid: "img meta" auto / 200px auto;
-  margin-bottom: 20px;
-}
-
-/* Use this class on a div that contains the img element */
-.article-img {
-  grid-area: img;
-  justify-self: center;
-}
-
-/* Use this class on a div that contains the description, link, etc. */
-.article-meta {
-  grid-area: meta;
-  align-self: start;
-}
