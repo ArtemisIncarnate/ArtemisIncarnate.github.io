@@ -35,15 +35,8 @@ a {
 }
 
 #img_id {
-  height: 100px;
-  width: 100px;
-  max-height: 40%;
-  max-width: 40%;
-}
-
-img {
   height: 200px;
   width: 200px;
-  max-width: 40%;
   max-height: 40%;
+  max-width: 40%;
 }
