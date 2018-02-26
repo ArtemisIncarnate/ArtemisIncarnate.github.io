@@ -1,0 +1,49 @@
+body {
+    background-color: LightGray;
+}
+
+a {
+  text-decoration:none;
+}
+
+.title {
+  color: Purple;
+  font-family: Georgia;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+.first_class {
+  color: blue;
+  text-align: left;
+}
+
+.second_class {
+  color: green;
+  text-align: left;
+}
+
+.third_class {
+  color: red;
+  text-align: left;
+}
+
+#first_id {
+  color: BlueViolet;
+  text-align: center;
+}
+
+#img_id {
+  height: 100px;
+  width: 100px;
+  max-height: 40%;
+  max-width: 40%;
+}
+
+img {
+  height: 300px;
+  width: 300px;
+  max-width: 40%;
+  max-height: 40%;
+}
