@@ -55,12 +55,12 @@ img {
 }
 
 .center_div {
-    border-style: 2px solid black;
+    border-style: solid DarkGreen;
     border-width: 2px 10px 4px 20px;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-    background-color: White;
-    text-align: left;
+    background-color: LightGreen;
+    text-align: center;
     padding: 8px;
 }
