@@ -22,7 +22,7 @@ let projectObject = {
     'Puerto Rico',
     'diaspora'
   ]
-  keyactions: [
+  keyterms: [
     'sustainable infrastructure',
     'energy',
     'water treatment',
