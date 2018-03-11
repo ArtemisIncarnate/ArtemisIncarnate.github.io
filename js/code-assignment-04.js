@@ -5,8 +5,8 @@ let projectArray = [
   'Disaster relief in Puerto Rico.',
   '100 by 35',
   true,
-  ['disaster relief', 'solidarity', 'Puerto Rico', 'diaspora']
-  ['sustainable infrastructure', 'energy', 'water treatment', 'food sovereignty']
+  ['disaster relief', 'solidarity', 'Puerto Rico', 'diaspora', 'sustainable infrastructure',
+  'energy', 'water treatment', 'food sovereignty']
 ]
 
 let projectObject = {
@@ -20,9 +20,7 @@ let projectObject = {
     'disaster relief',
     'solidarity',
     'Puerto Rico',
-    'diaspora'
-  ]
-  keyterms: [
+    'diaspora',
     'sustainable infrastructure',
     'energy',
     'water treatment',

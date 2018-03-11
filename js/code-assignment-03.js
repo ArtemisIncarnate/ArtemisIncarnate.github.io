@@ -1,4 +1,4 @@
-let schoolYear = 2018;
+let myYear = 2018;
 let projectString = 'Course assignments for GEOG 4046.';
 let projectThumb = true;
 let myArray = ['Book 1', 'Book 2', 'Book 3'];
@@ -8,7 +8,7 @@ let projectUrl = [
   'https://www.arcgis.com/apps/Styler/index.html?appid=ad8981442a6145c892c9b552e46434a5',
   'https://lsu-gis.maps.arcgis.com/apps/GeoForm/index.html?appid=426bd166ea73481e815e02e69faf716f'];
 
-console.log(schoolYear);
+console.log(myYear);
 console.log(projectString);
 console.log(projectThumb);
 console.log(myArray);
