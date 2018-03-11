@@ -19,7 +19,7 @@ let webApps = [
 
 for (let i = 0; i < webApps.length; i++) {
   console.log('webApp ' + i + ' title: ' + webApps[i].title)
-  console.log('url' + webApps[i].id + '.com')
+  console.log('url: ' + webApps[i].url + ' Link to app')
   console.log('images/ss-webApps-' + webapps[i].id + '.png')
   if (webApps[i].hasThumbnail === true) {
   console.log('images/' + webApps[i].id + '.png') // build and log an image file name based on the project ID
