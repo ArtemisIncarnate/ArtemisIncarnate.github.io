@@ -21,7 +21,7 @@ for (let i = 0; i < webApps.length; i++) {
   console.log('webApp ' + i + ' title: ' + webApps[i].title)
   console.log('url: ' + webApps[i].url + ' Link to app')
   if (webApps[i].url === true) {
-  console.log('url ' + webApps[i].id + 'Link to app.') // build and log an image file name based on the project ID
+  console.log('url ' + webApps[i].url + 'Link to app.') // build and log an image file name based on the project ID
   } else {
     console.log('url/no-preview.com')
   }
