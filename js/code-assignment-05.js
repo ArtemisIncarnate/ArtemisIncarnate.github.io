@@ -22,5 +22,8 @@ for (let i = 0; i < webApps.length; i++) {
   console.log('url' + webApps[i].id + '.com')
   console.log('images/ss-webApps-' + webapps[i].id + '.png')
   if (webApps[i].hasThumbnail === true) {
-    console.log('images/ss-webapps-' + webApps[i].id + '.png') // build and log an image file name based on the project ID
+  console.log('images/' + webApps[i].id + '.png') // build and log an image file name based on the project ID
+  } else {
+    console.log('images/no-preview.png')
   }
+}
