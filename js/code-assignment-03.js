@@ -8,7 +8,7 @@ let projectUrl = [
   'https://www.arcgis.com/apps/Styler/index.html?appid=ad8981442a6145c892c9b552e46434a5',
   'https://lsu-gis.maps.arcgis.com/apps/GeoForm/index.html?appid=426bd166ea73481e815e02e69faf716f'];
 
-console.log(ProjectYear);
+console.log(projectYear);
 console.log(projectString);
 console.log(projectThumb);
 console.log(myArray);
