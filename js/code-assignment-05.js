@@ -31,4 +31,9 @@ for (let i = 0; i < webApps.length; i++) {
   } else {
     console.log('images/no-preview.com')
   }
+  if (webApps[i].title === "") {
+  console.log('The title is Assignment ' + i)
+  } else {
+    console.log('This assignment has title ' + i)
+  }
 }
