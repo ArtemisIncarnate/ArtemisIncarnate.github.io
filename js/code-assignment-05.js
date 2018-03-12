@@ -20,9 +20,13 @@ let webApps = [
 for (let i = 0; i < webApps.length; i++) {
   console.log('webApp ' + i + ' title: ' + webApps[i].title)
   console.log('url: ' + webApps[i].url + ' Link to app')
+  console.log('images/ss-project-' + webApps[i].id + '.png')
   if (webApps[i].url === true) {
   console.log('url ' + webApps[i].url + 'Success!')
   } else {
     console.log('url/no-preview.com')
+  }
+  if (projects[i].hasThumbnail === true) {
+  console.log('images/ss-project-' + webApps[i].id + '.png')
   }
 }
