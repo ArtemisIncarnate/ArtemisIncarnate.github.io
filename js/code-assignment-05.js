@@ -26,7 +26,7 @@ for (let i = 0; i < webApps.length; i++) {
   } else {
     console.log('url/no-preview.com')
   }
-  if (projects[i].hasThumbnail === true) {
+  if (webApps[i].hasThumbnail === true) {
   console.log('images/ss-webApps-' + webApps[i].id + '.png')
   } else {
     console.log('images/no-preview.com')
