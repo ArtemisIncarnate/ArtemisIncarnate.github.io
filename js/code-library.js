@@ -18,5 +18,5 @@ let projectDescription = describeProject('myProjects')
 console.log(projectDescription)
 
 //jQuery code - way of doing something after it has already been run and waiting for it to load again
-$(document).ready(console.log('The page is ready!'))  // this is not built into Javascript. It is built into our jQuery library
+//$(document).ready(console.log('The page is ready!'))  // this is not built into Javascript. It is built into our jQuery library
 $(document).ready(describeProject('myProjects'))
