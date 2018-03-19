@@ -46,7 +46,7 @@
 //begin js.code-assignment-06 specific code
 
 function describeProject (project) {
-  let projectDescription = 'The ' + project + 'is one of many in a student portfolio.'
+  let projectDescription = 'The ' + myProject + ' is one of many in a student portfolio.'
   return projectDescription
 }
 
