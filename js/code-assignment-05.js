@@ -20,14 +20,14 @@ let webApps = [
 for (let i = 0; i < webApps.length; i++) {
   console.log('webApp ' + i + ' title: ' + webApps[i].title)
   console.log('url: ' + webApps[i].url + ' Link to app')
-  console.log('images/ss-webApps-' + webApps[i].id + '.png')
+  console.log('images/screenviewhome00' + webApps[i].id + '.png')
   if (webApps[i].url === true) {
     console.log('url ' + webApps[i].url + 'Success!')
   } else {
     console.log('url/no-preview.com')
   }
   if (webApps[i].hasThumbnail === true) {
-    console.log('images/ss-webApps-' + webApps[i].id + '.png')
+    console.log('images/screenviewhome00-' + webApps[i].id + '.png')
   } else {
     console.log('images/no-preview.com')
   }
