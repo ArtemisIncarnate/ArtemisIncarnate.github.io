@@ -17,7 +17,8 @@ let webApps = [
   webApp1
 ]
 
-let webApps = [] // this is a global variable which is accessable in functions but does not need to refer to a parameter. Not a good practice to keep.
+//let webApps = []  
+//this is a global variable which is accessable in functions but does not need to refer to a parameter. Not a good practice to keep.
 
 for (let i = 0; i < webApps.length; i++) {
   console.log('webApp ' + i + ' title: ' + webApps[i].title)
