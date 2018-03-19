@@ -9,13 +9,13 @@
 // Library is a collection of code around a certain theme. (i.e. a mapping library for ArcGIS)
 
 function describeProject (project) {
-  let projectDescription = 'The ' + myProjects + ' is one of many in a student portfolio.'
-  return projectDescription
+  let projectDescriptions = 'The ' + myProjects + ' is one of many in a student portfolio.'
+  return projectDescriptions
 }
 
 let myProjects = 'Book Assignment 1, Story Tour, '
-let projectDescription = describeProject('myProjects')
-console.log(projectDescription)
+let projectDescriptions = describeProject('myProjects')
+console.log(projectDescriptions)
 
 //jQuery code - way of doing something after it has already been run and waiting for it to load again
 //$(document).ready(console.log('The page is ready!'))  // this is not built into Javascript. It is built into our jQuery library
