@@ -10,6 +10,8 @@
 
 //jQuery code - way of doing something after it has already been run and waiting for it to load again
 //$(document).ready(console.log('The page is ready!'))  // this is not built into Javascript. It is built into our jQuery library
+
+let myProjects = 'Book Assignment 1, Story Tour, '
 $(document).ready(describeProject('myProjects'))
 
 function describeProject (projects) {
@@ -17,6 +19,5 @@ function describeProject (projects) {
   return projectDescriptions
 }
 
-let myProjects = 'Book Assignment 1, Story Tour, '
 let projectDescriptions = describeProject('myProjects')
 console.log(projectDescriptions)
