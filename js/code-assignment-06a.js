@@ -1,21 +1,23 @@
-let webApp0 = {
-  id: 0,
-  title: 'Web Map App: Client',
-  url: 'https://lsu-gis.maps.arcgis.com/apps/webappviewer/index.html?id=4e483548f9c246109f2c044798951275',
-  hasThumbnail: true
-}
+//the following 16 lines of code are set as comments so that errors will be averted in the console.
 
-let webApp1 = {
-  id: 1,
-  title: 'Web Map App: User',
-  url: 'https://lsu-gis.maps.arcgis.com/apps/webappviewer/index.html?id=84b8637888554febb96bdf2c9580f07a',
-  hasThumbnail: true
-}
+//let webApp0 = {
+  //id: 0,
+  //title: 'Web Map App: Client',
+  //url: 'https://lsu-gis.maps.arcgis.com/apps/webappviewer/index.html?id=4e483548f9c246109f2c044798951275',
+  //hasThumbnail: true
+//}
 
-let webApps = [
-  webApp0,
-  webApp1
-]
+//let webApp1 = {
+  //id: 1,
+  //title: 'Web Map App: User',
+  //url: 'https://lsu-gis.maps.arcgis.com/apps/webappviewer/index.html?id=84b8637888554febb96bdf2c9580f07a',
+  //hasThumbnail: true
+//}
+
+//let webApps = [
+  //webApp0,
+  //webApp1
+//]
 
 //let webApps = []
 //this is a global variable which is accessable in functions but does not need to refer to a parameter. Not a good practice to keep.
