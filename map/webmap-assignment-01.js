@@ -11,7 +11,7 @@ let polygon = L.polygon([
   [51.509, -0.08],
   [51.503, -0.06],
   [51.51, -0.047]
-]).addTo(mymap)
+], {color: 'lightgreen'}).addTo(mymap)
 
 marker.bindPopup('London Bridge Station')
 polygon.bindPopup('St. Katharine\'s and Wapping')
@@ -21,6 +21,7 @@ function logCurrentCoordinates (event) {
 }
 mymap.on('click', logCurrentCoordinates)
 
-mymap.on('click', function (event) {
-  console.log('You clicked the map at ' + event.latlng)
-})
+// mymap.on('click', function (event) {
+  // console.log('You clicked the map at ' + event.latlng)
+// })  this is called an anonymous function - it doesn't have a someName
+// the function we put in is called the 'call-back' function which calls the object (event),which has a latLong property
