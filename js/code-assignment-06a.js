@@ -22,14 +22,14 @@ let webApps = [] // this is a global variable which is accessable in functions b
 for (let i = 0; i < webApps.length; i++) {
   console.log('webApp ' + i + ' title: ' + webApps[i].title)
   console.log('url: ' + webApps[i].url + ' Link to app')
-  console.log('images/ss-webApps-' + webApps[i].id + '.png')
+  console.log('images/screenwatershedsinks' + webApps[i].id + '.png')
   if (webApps[i].url === true) {
     console.log('url ' + webApps[i].url + 'Success!')
   } else {
     console.log('url/no-preview.com')
   }
   if (webApps[i].hasThumbnail === true) {
-    console.log('images/ss-webApps-' + webApps[i].id + '.png')
+    console.log('images/screenwatershedsinks' + webApps[i].id + '.png')
   } else {
     console.log('images/no-preview.com')
   }
@@ -40,33 +40,16 @@ for (let i = 0; i < webApps.length; i++) {
   }
 }
 
-function describeFruit (fruit) {
-  let description = 'The ' + fruit + 'is a delicious snack.'
-  return description
+//begin js.code-assignment-06 specific code
+
+function describeProject (project) {
+  let projectDescription = 'The ' + project + 'is one of many in a student portfolio.'
+  return projectDescription
 }
 
-let fruitDescription = describeFruit('apple')
-console.log(fruitDescription)
+let myProject = 'Book Assignment 2, Earthquake Activity Map, '
+let projectDescription = describeProject('myProject')
+console.log(projectDescription)
 
-for (let i = 0; i < webApps.length; i++) {
-  let title = createTitle(i)
-  console.log(title)
-  let imageSrc = createImageSrc(i)
-  console.log(imageSrc)
-}
-
-function createTitle (i) {
-  return webApps[i].title
-}
-
-function createImageSrc () {
-  if (webApps[i].thumb === true) {
-    console.log('images/ss-webApps-' + webApps[i].id + '.PNG') // change projects to webApps and add correct image links
-  } else {
-    console.log('images/no-preview.png')
-  }
-}
-
-function createTitle () {
-  console.log('Index position ' + i + ' title: ' + webApps[i].title)
-}
+//this is also the same as 1) let projectDescription = describeProject('myProject'); 2) console.log(projectDescription)
+// this is also the same as 1) console.log(describeProject('myProject'))
