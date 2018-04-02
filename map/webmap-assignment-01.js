@@ -17,3 +17,12 @@ function logCurrentCoordinates (event) {
   console.log('You clicked the map at ' + event.latlng)
 }
 mymap.on('click', logCurrentCoordinates)
+
+let latlngs = [
+    [51.499552, -0.126971],
+    [51.508155, -0.099892],
+    [51.508077, -0.096854],
+    [51.5, -0.09]
+]
+
+let polyline = L.polyline(latlngs, {color: 'purple'}).addTo(map)
