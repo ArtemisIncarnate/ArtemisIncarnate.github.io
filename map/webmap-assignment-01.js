@@ -1,12 +1,14 @@
+var siteseeing = [
+		["London Bridge Station",51.5,-0.09],
+		["Big Ben",51.508155,-0.099892],
+		["Westminster Abbey",-51.499552,-0.126971],
+		["Shakespeare\'s Globe Theatre",51.508077,-0.096854]
+		]
+
 let mymap = L.map('drawMap').setView([51.505, -0.09], 14)
 
 let basemapUrl = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
 L.tileLayer(basemapUrl).addTo(mymap)
-
-let markerTransport = L.marker([51.5, -0.09]).addTo(mymap)  // class default - London Bridge Station
-let markerClock = L.marker([51.508155, -0.099892]).addTo(mymap) // Big Ben
-let markerAbbey = L.marker([51.499552, -0.126971]).addTo(mymap) // Westminster Abbey
-let markerTheatre = L.marker([51.508077, -0.096854]) // Globe Theatre
 
 let polygon = L.polygon([
   [51.509, -0.08],
@@ -14,19 +16,14 @@ let polygon = L.polygon([
   [51.51, -0.047]
 ], {color: 'lightgreen'}).addTo(mymap)
 
-markerTransport.bindPopup('London Bridge Station')
-markerClock.bindPopup('Big Ben')
-markerAbbey.bindPopup('Westminster Abbey')
-markerTheatre.bindPopup('Shakespeare\'s Globe Theatre)
-
 polygon.bindPopup('St. Katharine\'s and Wapping')
+
+for (var i = 0; i < siteseeing.length; i++) {
+  marker = new L.marker([planes[i][1],planes[i][2]])
+    .bindPopup(siteseeing[i][0])
+    .addTo(mymap);
 
 function logCurrentCoordinates (event) {
   console.log('You clicked the map at ' + event.latlng)
 }
 mymap.on('click', logCurrentCoordinates)
-
-// mymap.on('click', function (event) {
-  // console.log('You clicked the map at ' + event.latlng)
-// })  this is called an anonymous function - it doesn't have a someName
-// the function we put in is called the 'call-back' function which calls the object (event),which has a latLong property
