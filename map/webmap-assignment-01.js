@@ -1,8 +1,12 @@
 // let someName = L.map('your-map-div-id').setView([yourLat, yourLon], yourZoom)
-let mymap = L.map('drawMap').setView([51.505, -0.09], 13) // this map is being created as an object
+let mymap = L.map('drawMap').setView([51.499552, -0.099892], 15) // this map is being created as an object
 // the capitol L here is specfiic to Leaflet and the syntax is specific to it (like console is for js
 // the dot.setview is another function that will take the map object and rearranges aspects of the object function
 // 13 is the zoom level. The higher the number, the more zoomed in it is. It can go up to 20
+
+// 51.508155, -0.099892 - Big Ben
+// 51.499552, -0.126971 - Westminster Abbey
+
 let basemapUrl = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
 L.tileLayer(basemapUrl).addTo(mymap)
 // let markerArray = [5.15, -0.09] -- this is an alternative way of writing code below
