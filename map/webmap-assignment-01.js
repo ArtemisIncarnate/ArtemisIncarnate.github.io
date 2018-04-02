@@ -1,4 +1,4 @@
-let mymap = L.map('drawMap').setView([51.499, -0.08], 14)
+let mymap = L.map('drawMap').setView([51.499, -0.095], 14)
 
 let basemapUrl = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
 L.tileLayer(basemapUrl).addTo(mymap)
@@ -24,5 +24,4 @@ let latlngs = [
     [51.508077, -0.096854],
     [51.5, -0.09]
 ]
-
-let polyline = L.polyline(latlngs, {color: 'purple'}).addTo(map)
+let polyline = L.polyline(latlngs, {color: 'purple'}).addTo(mymap)
