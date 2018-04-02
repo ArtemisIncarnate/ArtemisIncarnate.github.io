@@ -1,4 +1,4 @@
-let mymap = L.map('drawMap').setView([51.499, -0.1], 14)
+let mymap = L.map('drawMap').setView([51.5, -0.1], 14)
 
 let basemapUrl = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
 L.tileLayer(basemapUrl).addTo(mymap)
@@ -18,6 +18,7 @@ markerTransport.bindPopup('London Bridge Station')
 markerClock.bindPopup('Big Ben')
 markerAbbey.bindPopup('Westminster Abbey')
 markerTheatre.bindPopup('Shakespeare\'s Globe Theatre)
+
 polygon.bindPopup('St. Katharine\'s and Wapping')
 
 function logCurrentCoordinates (event) {
