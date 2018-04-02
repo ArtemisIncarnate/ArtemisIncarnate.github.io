@@ -1,12 +1,7 @@
 #drawMap { height: 500px }
 
 .title {
-  border: 2px solid #8B0000;
-  color: Purple;
   font-family: Georgia;
-  text-align: center;
-}
-
-.uppercase {
+  text-align: left;
   text-transform: uppercase;
 }
