@@ -5,6 +5,4 @@
 
 // let myGeojson = {"type":"FeatureCollection"...} // use your own geojson
 
-// L.geoJSON(myGeojson).addTo(myMap)
-
 // L.geoJSON(myGeojson, { style: { color: 'red' }}).addTo(myMap) // object 2 is the color or inner object; object 1 is the style with the object 2 within console.log(require('util').inspect(, { depth: null }))
