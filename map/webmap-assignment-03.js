@@ -1,7 +1,7 @@
 let newmap = L.map('drawMap').setView([51.507, -0.096], 14)
 
-let basemapUrl = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
-L.tileLayer(basemapUrl).addTo(newmap)
+let newbasemapUrl = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
+L.tileLayer(newbasemapUrl).addTo(newmap)
 
 let myMarker = L.marker([51.499, -0.127], {icon: myFlagIcon}).addTo(newmap)
 let myFlagIcon = L.icon({
