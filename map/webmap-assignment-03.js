@@ -21,8 +21,7 @@ let myNewPolygonStyle = {
 let myNewPolygon = L.polygon([
   [51.499, -0.127],
   [51.508, -0.099],
-  [51.500 -0.090],
-  [51.499 -0.126]
+  [51.500 -0.090]
 ], 'myNewPolygonStyle').addTo(newmap)
 
 myMarker.bindPopup('Westminster Abbey')
