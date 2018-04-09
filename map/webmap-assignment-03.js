@@ -4,10 +4,10 @@ let newbasemapUrl = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_
 L.tileLayer(newbasemapUrl).addTo(newmap)
 
 let myFlagIcon = L.icon({
-  iconFlagUrl: 'Images/ukflagicon.png',
-  iconFlagSize: [35, 92], // size of the icon
-  iconFlagAnchor: [19, 91], // point of the icon which will correspond to marker's location
-  popupFlagAnchor: [-4, -74] // point from which the popup should open relative to the iconAnchor
+  iconUrl: 'Images/ukflagicon.png',
+  iconSize: [35, 92], // size of the icon
+  iconAnchor: [19, 91], // point of the icon which will correspond to marker's location
+  popupAnchor: [-4, -74] // point from which the popup should open relative to the iconAnchor
 })
 
 let myMarker = L.marker([51.499, -0.127], {icon: myFlagIcon}).addTo(newmap)
