@@ -1,9 +1,9 @@
-let mymap = L.map('drawMap').setView([51.507, -0.096], 14)
+let newmap = L.map('drawMap').setView([51.507, -0.096], 14)
 
 let basemapUrl = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
-L.tileLayer(basemapUrl).addTo(mymap)
+L.tileLayer(basemapUrl).addTo(newmap)
 
-let myMarker = L.marker([51.499, -0.127], {icon: myFlagIcon}).addTo(mymap)
+let myMarker = L.marker([51.499, -0.127], {icon: myFlagIcon}).addTo(newmap)
 let myFlagIcon = L.icon({
   iconFlagUrl: 'ukflagicon.png',
   iconFlagSize: [38, 95], // size of the icon
@@ -15,7 +15,7 @@ let myPolygon = L.polygon(
   [51.499, -0.127],
   [51.508, -0.099],
   [51.500 -0.090],
-  [51.499 -0.127], myPolygonStyle).addTo(mymap)
+  [51.499 -0.127], myPolygonStyle).addTo(newmap)
 
 let myPolygonStyle = {
   color: 'blue',
