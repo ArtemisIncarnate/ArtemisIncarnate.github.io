@@ -11,13 +11,13 @@ let myFlagIcon = L.icon({
   popupFlagAnchor: [-50, -0.135] // point from which the popup should open relative to the iconAnchor
 })
 
-let myPolygon = L.polygon(
+let myNewPolygon = L.polygon(
   [51.499, -0.127],
   [51.508, -0.099],
   [51.500 -0.090],
-  [51.499 -0.127], myPolygonStyle).addTo(newmap)
+  [51.499 -0.127], myNewPolygonStyle).addTo(newmap)
 
-let myPolygonStyle = {
+let myNewPolygonStyle = {
   color: 'blue',
   fillColor: 'lightblue'
 }
