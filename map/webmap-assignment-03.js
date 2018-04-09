@@ -4,7 +4,7 @@ let newbasemapUrl = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_
 L.tileLayer(newbasemapUrl).addTo(newmap)
 
 let myFlagIcon = L.icon({
-  iconUrl: 'https://www.surfingengland.org/wp-content/uploads/leaflet-maps-marker-icons/Surfing-England-botton-logo.png',
+  iconUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuqvJTUOV1csdoJywF7VPBDa9vmfzOkWEExI8geRTgaLqacxNOuA',
   iconSize: [20, 20], // size of the icon
   iconAnchor: [2, 5], // point of the icon which will correspond to marker's location
   popupAnchor: [-2, -3] // point from which the popup should open relative to the iconAnchor
