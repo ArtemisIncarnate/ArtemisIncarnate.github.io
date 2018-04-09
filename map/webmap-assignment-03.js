@@ -1,4 +1,4 @@
-let newmap = L.map('drawMap').setView([51.507, -0.096], 14)
+let newmap = L.map('drawNewMap').setView([51.507, -0.096], 14)
 
 let newbasemapUrl = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
 L.tileLayer(newbasemapUrl).addTo(newmap)
