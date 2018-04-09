@@ -10,7 +10,7 @@ let myFlagIcon = L.icon({
   popupAnchor: [-2, -3] // point from which the popup should open relative to the iconAnchor
 })
 
-let myMarker = L.marker([51.499, -0.127], {icon: myFlagIcon}).addTo(newmap)
+let myMarker = L.marker([51.499, -0.127], {icon: myFlagIcon}).addTo(newmap).myMarker.bindPopup('Westminster Abbey')
 
 let myNewPolygonStyle = {
   color: 'blue',
@@ -22,7 +22,4 @@ let myNewPolygon = L.polygon([
   [51.499, -0.127],
   [51.508, -0.099],
   [51.500, -0.090]
-], myNewPolygonStyle).addTo(newmap)
-
-myMarker.bindPopup('Westminster Abbey')
-myNewPolygon.bindPopup('My trip to London!')
+], myNewPolygonStyle).addTo(newmap).myNewPolygon.bindPopup('My trip to London!')
