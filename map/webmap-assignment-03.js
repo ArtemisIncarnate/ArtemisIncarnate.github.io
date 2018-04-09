@@ -12,11 +12,12 @@ let myFlagIcon = L.icon({
 
 let myMarker = L.marker([51.499, -0.127], {icon: myFlagIcon}).addTo(newmap).bindPopup("Westminster Abbey")
 
-let myNewPolygon = L.polygon(
+let myNewPolygon = L.polygon([
   [51.499, -0.127],
   [51.508, -0.099],
   [51.500 -0.090],
-  [51.499 -0.127], myNewPolygonStyle).addTo(newmap)
+  [51.499 -0.127]
+], myNewPolygonStyle).addTo(newmap)
 
 let myNewPolygonStyle = {
   color: 'blue',
