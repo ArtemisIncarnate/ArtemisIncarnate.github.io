@@ -12,9 +12,13 @@ let grayBasemap = L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y
 
 let satelliteBasemap = L.tileLayer('https://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}').addTo(mymap)
 
+let oceanBasemap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Ocean_Basemap/MapServer/tile/{z}/{y}/{x}').addTo(mymap)
+
+
 let myBasemaps = {
     'Light basemap': grayBasemap,
-    'Satellite': satelliteBasemap
+    'Satellite': satelliteBasemap,
+    'Ocean basemap': oceanBasemap
 }
 
 L.control.layers(myBasemaps).addTo(mymap)
