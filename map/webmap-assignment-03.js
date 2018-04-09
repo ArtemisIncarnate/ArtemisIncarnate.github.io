@@ -1,12 +1,12 @@
-let newmap = L.map('drawNewMap').setView([51.507, -0.096], 14)
+let newmap = L.map('drawNewMap').setView([51.507, -0.096], 13)
 
 let newbasemapUrl = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
 L.tileLayer(newbasemapUrl).addTo(newmap)
 
 let myFlagIcon = L.icon({
   iconFlagUrl: 'Images/ukflagicon.png',
-  iconFlagSize: [38, 95], // size of the icon
-  iconFlagAnchor: [50, 64], // point of the icon which will correspond to marker's location
+  iconFlagSize: [35, 92], // size of the icon
+  iconFlagAnchor: [19, 91], // point of the icon which will correspond to marker's location
   popupFlagAnchor: [-4, -74] // point from which the popup should open relative to the iconAnchor
 })
 
