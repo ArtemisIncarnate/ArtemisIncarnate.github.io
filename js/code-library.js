@@ -8,11 +8,10 @@
 // already been made.
 // Library is a collection of code around a certain theme. (i.e. a mapping library for ArcGIS)
 
-// jQuery code - way of doing something after it has already been run and waiting for it to load again
-// $(document).ready(console.log('The page is ready!'))  // this is not built into Javascript. It is built into our jQuery library
-
 let myProjects = 'Book Assignment 1, Story Tour, '
 $(document).ready(describeProject('myProjects'))
+// jQuery code - way of doing something after it has already been run and waiting for it to load again
+// $(document).ready(console.log('The page is ready!'))  // this is not built into Javascript. It is built into our jQuery library
 
 function describeProject (projects) {
   let projectDescriptions = 'The ' + myProjects + ' is one of many in a student portfolio.'
