@@ -1,26 +1,8 @@
 let mapFive = L.map('drawMapFive').setView([38, -98], 4) // center of US coords
-var openStreetMap = L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
+let openStreetMap = L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
   maxZoom: 18,
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(mapFive)
-
-let grayBasemap = L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png')
-let satelliteBasemap = L.tileLayer('https://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}')
-let oceanBasemap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Ocean_Basemap/MapServer/tile/{z}/{y}/{x}')
-let mhi = L.esri.dynamicMapLayer({
-  url: 'https://servoces.arcgisonline.com/arcgis/rest/services/Demographics/USA_Median_Household_Income/MapServer',
-  opacity: 0.7
-}).addTo(mapFive)
-
-let baseMaps5 = {
-    'Open Streets Map': openSteetMap,
-    'Basic Map': grayBasemap,
-    'Satellite Map': satelliteBasemap,
-    'Ocean Map': oceanBasemap,
-    'Interactive Map': mhi
-}
-
-L.control.layers(baseMaps5).addTo(mapFive)
 
 mapStyle = function (state) {
   let genderFemale = state.properties.FEMALES // female population
@@ -50,6 +32,19 @@ function stateInfo (state, layer) {
 }
 L.geoJSON(mygeoJsonMapFour, mapOptions).addTo(mapFive) // object 2 is the color or inner object; object 1 is the style with the object 2 within console.log(require('util').inspect(, { depth: null }))
 // L.geoJSON(stateDemographics, mapOptions).addTo(mapFive)
+
+let grayBasemap = L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png')
+let satelliteBasemap = L.tileLayer('https://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}')
+let oceanBasemap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Ocean_Basemap/MapServer/tile/{z}/{y}/{x}')
+
+let baseMapsFive = {
+    'Open Streets Map': openSteetMap,
+    'Basic Map': grayBasemap,
+    'Satellite Map': satelliteBasemap,
+    'Ocean Map': oceanBasemap
+}
+
+L.control.layers(baseMapsFive).addTo(mapFive)
 
 // function mapStyle (feature) {
 // }
