@@ -8,7 +8,7 @@ myStyle = function (state) {
   let genderFemale = state.properties.FEMALES // female population
   let genderMale = state.properties.MALES // male population
   let stateColor = 'red'
-  if (genderFemale > genderMale) {stateColor = 'Purple'} // girls are royalty
+  if (genderFemale > genderMale) { stateColor = 'Purple' } // girls are royalty
   let myStyle = {
     color: stateColor,
     fillOpacity: 0.3,
