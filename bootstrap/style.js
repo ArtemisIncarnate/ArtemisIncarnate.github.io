@@ -1,1 +1,1 @@
-// this is the new js file for bootstrap exercist
+// this is the new js file for bootstrap exercise
