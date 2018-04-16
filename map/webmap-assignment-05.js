@@ -1,8 +1,6 @@
 // begin Map 5
 let mapFive = L.map('drawMap5').setView([39, -98], 4)
-mymap.on('click', function(event){
-
-} // center of US coords
+// mymap.on('click', function(event){ } center of US coords
 
 //create basemap layer
 let openStreetMap = L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
@@ -11,11 +9,8 @@ let openStreetMap = L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{
 }).addTo(mapFive)
 
 let grayBasemap = L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png')
-
 let satelliteBasemap = L.tileLayer('https://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}')
-
 let oceanBasemap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Ocean_Basemap/MapServer/tile/{z}/{y}/{x}')
-
 let mhi = L.esri.dynamicMapLayer({
   url: 'https://servoces.arcgisonline.com/arcgis/rest/services/Demographics/USA_Median_Household_Income/MapServer',
   opacity: 0.7
@@ -24,29 +19,15 @@ let mhi = L.esri.dynamicMapLayer({
 // return 'Risk Level' + featureCollection.features[0].properties[2012 Median Household Income (ESRI);
 // https://esri.github.io/esri-leaflet/examples/customizing-popups.html
 
-let myBasemaps = {
+let baseMaps5 = {
     'Open Streets Map': openSteetMap,
     'Basic Map': grayBasemap,
     'Satellite Map': satelliteBasemap,
-    'Ocean Map': oceanBasemap
+    'Ocean Map': oceanBasemap,
+    'Interactive Map': mhi
 }
 
-L.control.layers(myBasemaps).addTo(mapFive)
-
-function myStyle (feature) {
-
-}
-function myPopup (feature, layer) {
-
-}
-
-let myOptions = {
-  style: myStyle,
-  onEachFeature: myPopup
-}
-
-L.geoJSON(stateDemographics, myOptions).addTo(mymap)
-
+L.control.layers(baseMaps5).addTo(mapFive)
 
 myStyle = function (state) {
   let genderFemale = state.properties.FEMALES // female population
@@ -74,4 +55,16 @@ function stateInfo (state, layer) {
   let statePopulation = state.properties.POPULATION
   layer.bindPopup(stateName + ': Population by gender <br>Assigned female at birth:' + genderFemale + '<br>Assigned male at birth:' + genderMale + '<br>Total population in 2016: ' + statePopulation)
 }
-L.geoJSON(mygeoJsonMapFour, myOptions).addTo(mapFour) // object 2 is the color or inner object; object 1 is the style with the object 2 within console.log(require('util').inspect(, { depth: null }))
+
+// function myStyle (feature) {
+// }
+// function myPopup (feature, layer) {
+// }
+
+// let myOptions = {
+  // style: myStyle,
+  // onEachFeature: myPopup
+// }
+
+L.geoJSON(mygeoJsonMapFour, myOptions).addTo(mapFive) // object 2 is the color or inner object; object 1 is the style with the object 2 within console.log(require('util').inspect(, { depth: null }))
+// L.geoJSON(stateDemographics, myOptions).addTo(mapFive)
