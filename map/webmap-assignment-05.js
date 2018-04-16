@@ -45,13 +45,3 @@ let baseMapsFive = {
 }
 
 L.control.layers(baseMapsFive).addTo(mapFive)
-
-// function mapStyle (feature) {
-// }
-// function mapPopup (feature, layer) {
-// }
-
-// let mapOptions = {
-  // style: mapStyle,
-  // onEachFeature: mapPopup
-// }
