@@ -8,7 +8,7 @@ mapStyle = function (state) {
   let genderFemale = state.properties.FEMALES // female population
   let genderMale = state.properties.MALES // male population
   let stateColor = 'red'
-  if (genderFemale > genderMale) {stateColor = 'Purple'} // girls are royalty
+  if (genderFemale > genderMale) { stateColor = 'Purple' } // girls are royalty
   let mapStyle = {
     color: stateColor,
     fillOpacity: 0.3,
@@ -37,9 +37,9 @@ let satelliteBasemap = L.tileLayer('https://korona.geog.uni-heidelberg.de/tiles/
 let oceanBasemap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Ocean_Basemap/MapServer/tile/{z}/{y}/{x}')
 
 let baseMapsFive = {
-    'Basic Map': grayBasemap,
-    'Satellite Map': satelliteBasemap,
-    'Ocean Map': oceanBasemap
+  'Basic Map': grayBasemap,
+  'Satellite Map': satelliteBasemap,
+  'Ocean Map': oceanBasemap
 }
 
 L.control.layers(baseMapsFive).addTo(mapFive)
