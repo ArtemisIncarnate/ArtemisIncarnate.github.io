@@ -1,9 +1,5 @@
-// begin Map 5
-let mapFive = L.map('drawMap5').setView([39, -98], 4)
-// mymap.on('click', function(event){ } center of US coords
-
-//create basemap layer
-let openStreetMap = L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
+let mapFive = L.map('drawMapFive').setView([38, -98], 4) // center of US coords
+var openStreetMap = L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
   maxZoom: 18,
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(mapFive)
@@ -16,9 +12,6 @@ let mhi = L.esri.dynamicMapLayer({
   opacity: 0.7
 }).addTo(mapFive)
 
-// return 'Risk Level' + featureCollection.features[0].properties[2012 Median Household Income (ESRI);
-// https://esri.github.io/esri-leaflet/examples/customizing-popups.html
-
 let baseMaps5 = {
     'Open Streets Map': openSteetMap,
     'Basic Map': grayBasemap,
@@ -29,22 +22,22 @@ let baseMaps5 = {
 
 L.control.layers(baseMaps5).addTo(mapFive)
 
-myStyle = function (state) {
+mapStyle = function (state) {
   let genderFemale = state.properties.FEMALES // female population
   let genderMale = state.properties.MALES // male population
   let stateColor = 'red'
   if (genderFemale > genderMale) {stateColor = 'Purple'} // girls are royalty
-  let myStyle = {
+  let mapStyle = {
     color: stateColor,
     fillOpacity: 0.3,
     dashArray: 3,
     weight: 4
   }
-  return myStyle
+  return mapStyle
 }
 
-let myOptions = {
-  style: myStyle,
+let mapOptions = {
+  style: mapStyle,
   onEachFeature: stateInfo
 }
 
@@ -55,16 +48,15 @@ function stateInfo (state, layer) {
   let statePopulation = state.properties.POPULATION
   layer.bindPopup(stateName + ': Population by gender <br>Assigned female at birth:' + genderFemale + '<br>Assigned male at birth:' + genderMale + '<br>Total population in 2016: ' + statePopulation)
 }
+L.geoJSON(mygeoJsonMapFour, mapOptions).addTo(mapFive) // object 2 is the color or inner object; object 1 is the style with the object 2 within console.log(require('util').inspect(, { depth: null }))
+// L.geoJSON(stateDemographics, mapOptions).addTo(mapFive)
 
-// function myStyle (feature) {
+// function mapStyle (feature) {
 // }
-// function myPopup (feature, layer) {
-// }
-
-// let myOptions = {
-  // style: myStyle,
-  // onEachFeature: myPopup
+// function mapPopup (feature, layer) {
 // }
 
-L.geoJSON(mygeoJsonMapFour, myOptions).addTo(mapFive) // object 2 is the color or inner object; object 1 is the style with the object 2 within console.log(require('util').inspect(, { depth: null }))
-// L.geoJSON(stateDemographics, myOptions).addTo(mapFive)
+// let mapOptions = {
+  // style: mapStyle,
+  // onEachFeature: mapPopup
+// }
