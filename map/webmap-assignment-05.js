@@ -4,7 +4,20 @@ let openStreetMap = L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(mapFive)
 
-mapStyle = function (state) {
+let grayBasemap = L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png')
+let satelliteBasemap = L.tileLayer('https://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}')
+let oceanBasemap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Ocean_Basemap/MapServer/tile/{z}/{y}/{x}')
+
+let baseMapsFive = {
+  'Open Source Map': openStreetMap,
+  'Basic Map': grayBasemap,
+  'Satellite Map': satelliteBasemap,
+  'Ocean Map': oceanBasemap
+}
+
+L.control.layers(baseMapsFive).addTo(mapFive)
+
+let mapStyle = function (state) {
   let genderFemale = state.properties.FEMALES // female population
   let genderMale = state.properties.MALES // male population
   let stateColor = 'red'
@@ -32,14 +45,3 @@ function stateInfo (state, layer) {
 }
 L.geoJSON(mygeoJsonMapFour, mapOptions).addTo(mapFive) // object 2 is the color or inner object; object 1 is the style with the object 2 within console.log(require('util').inspect(, { depth: null }))
 // L.geoJSON(stateDemographics, mapOptions).addTo(mapFive)
-let grayBasemap = L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png')
-let satelliteBasemap = L.tileLayer('https://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}')
-let oceanBasemap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Ocean_Basemap/MapServer/tile/{z}/{y}/{x}')
-
-let baseMapsFive = {
-  'Basic Map': grayBasemap,
-  'Satellite Map': satelliteBasemap,
-  'Ocean Map': oceanBasemap
-}
-
-L.control.layers(baseMapsFive).addTo(mapFive)
