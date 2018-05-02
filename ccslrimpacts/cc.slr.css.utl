@@ -1,0 +1,7 @@
+#drawSlrMap { height: 600px }
+
+.titlepage {
+  font-family: Georgia;
+  text-align: left;
+  text-transform: uppercase;
+}
