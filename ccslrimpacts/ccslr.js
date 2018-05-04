@@ -43,5 +43,5 @@ function stateInfo (state, layer) {
   let statePopulation = state.properties.POPULATION
   layer.bindPopup(stateName + ': Population by gender <br>Assigned female at birth:' + genderFemale + '<br>Assigned male at birth:' + genderMale + '<br>Total population in 2016: ' + statePopulation)
 }
-L.geoJSON(mygeoJsonMapFour, mapOptions).addTo(mapCcSlr) // object 2 is the color or inner object; object 1 is the style with the object 2 within console.log(require('util').inspect(, { depth: null }))
+L.geoJSON(geoJsonCcSlrPop, mapOptions).addTo(mapCcSlr) // object 2 is the color or inner object; object 1 is the style with the object 2 within console.log(require('util').inspect(, { depth: null }))
 // L.geoJSON(stateDemographics, mapOptions).addTo(mapCcSlr)
