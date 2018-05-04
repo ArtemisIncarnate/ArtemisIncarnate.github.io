@@ -27,6 +27,24 @@ let myTampaIcon = L.icon({
 
 let myTampaMarker = L.marker([-82.496337890625, 27.945886221761945], {icon: myTampaIcon}).addTo(mapCcSlr)
 
+let myMiamiIcon = L.icon({
+  iconUrl: 'https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.reliancefl.com%2Fportals%2F0%2FClevelander---Entrance---Miami-FL.png&f=1',
+  iconSize: [20, 20], // size of the icon
+  iconAnchor: [2, 5], // point of the icon which will correspond to marker's location
+  popupAnchor: [-2, -3] // point from which the popup should open relative to the iconAnchor
+})
+
+let myMiamiMarker = L.marker([-80.16998291015625, 25.767740402713354], {icon: myMiamiIcon}).addTo(mapCcSlr)
+
+let myJaxIcon = L.icon({
+  iconUrl: 'https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.coj.net%2FApp_Themes%2Fcoj2%2Fimages%2Flayout%2Ffooter_icon_cojseal.png&f=1',
+  iconSize: [20, 20], // size of the icon
+  iconAnchor: [2, 5], // point of the icon which will correspond to marker's location
+  popupAnchor: [-2, -3] // point from which the popup should open relative to the iconAnchor
+})
+
+let myJaxMarker = L.marker([-81.65313720703125, 30.330212685432734], {icon: myJaxIcon}).addTo(mapCcSlr)
+
 let myFlPolygonStyle = {
   color: 'blue',
   fillColor: 'lightblue',
