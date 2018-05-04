@@ -1,5 +1,6 @@
-let mapCcSlr = L.map('drawSlrMap').setView([38, -98], 4) // center of US coords
-let openStreetMap = L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
+let mapCcSlr = L.map('drawSlrMap').setView([38, -98], 4)
+
+let openMap = L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
   maxZoom: 18,
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(mapCcSlr)
@@ -9,7 +10,7 @@ let satelliteBasemap = L.tileLayer('https://korona.geog.uni-heidelberg.de/tiles/
 let oceanBasemap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Ocean_Basemap/MapServer/tile/{z}/{y}/{x}')
 
 let baseMapsSlr = {
-  'Open Source Map': openStreetMap,
+  'Open Source Map': openMap,
   'Boundaries Map': grayBasemap,
   'Satellite Map': satelliteBasemap,
   'Ocean Map': oceanBasemap
@@ -17,31 +18,31 @@ let baseMapsSlr = {
 
 L.control.layers(baseMapsSlr).addTo(mapCcSlr)
 
-let mapStyle = function (state) {
-  let genderFemale = state.properties.FEMALES // female population
-  let genderMale = state.properties.MALES // male population
-  let stateColor = 'red'
-  if (genderFemale > genderMale) { stateColor = 'Purple' } // girls are royalty
-  let mapStyle = {
-    color: stateColor,
+let mapCcStyle = function (atriskpocstate) {
+  let raceBlack = atriskpocstate.properties.BLACK
+  let raceHispanic = atriskpocstate.properties.HISPANIC
+  let raceWhite = atriskpocstate.properties.WHITE
+  let atriskpocstateColor = 'green'
+  if (raceBlack + raceHispanic > raceWhite) { atriskpocstate = 'red' }
+  let mapCcStyle = {
+    color: atriskpocstateColor,
     fillOpacity: 0.3,
     dashArray: 3,
     weight: 4
   }
-  return mapStyle
+  return mapCcStyle
 }
 
-let mapOptions = {
-  style: mapStyle,
-  onEachFeature: stateInfo
+let mapCcOptions = {
+  style: mapCcStyle,
+  onEachFeature: atriskpocstateInfo
 }
 
-function stateInfo (state, layer) {
-  let stateName = state.properties.STATE_NAME
-  let genderFemale = state.properties.FEMALES
-  let genderMale = state.properties.MALES
+function atriskpocstateInfo (atriskpocstate, layer) {
+  let raceBlack = atriskpocstate.properties.BLACK
+  let raceHispanic = atriskpocstate.properties.HISPANIC
+  let raceWhite = atriskpocstate.properties.WHITE
   let statePopulation = state.properties.POPULATION
-  layer.bindPopup(stateName + ': Population by gender <br>Assigned female at birth:' + genderFemale + '<br>Assigned male at birth:' + genderMale + '<br>Total population in 2016: ' + statePopulation)
+  layer.bindPopup(stateName + ': Population demographics by race <br>Black population:' + raceBlack + '<br>Hisplanic population:' + raceHispanic + '<br>White population: ' + raceWhite)
 }
-L.geoJSON(geoJsonCcSlrPop, mapOptions).addTo(mapCcSlr) // object 2 is the color or inner object; object 1 is the style with the object 2 within console.log(require('util').inspect(, { depth: null }))
-// L.geoJSON(stateDemographics, mapOptions).addTo(mapCcSlr)
+L.geoJSON(geoJsonCcSlrPop, mapCcOptions).addTo(mapCcSlr)
