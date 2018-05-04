@@ -8,14 +8,14 @@ let grayBasemap = L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y
 let satelliteBasemap = L.tileLayer('https://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}')
 let oceanBasemap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Ocean_Basemap/MapServer/tile/{z}/{y}/{x}')
 
-let baseMapsCcSlr = {
+let baseMapsSlr = {
   'Open Source Map': openStreetMap,
-  'Basic Map': grayBasemap,
+  'Boundaries Map': grayBasemap,
   'Satellite Map': satelliteBasemap,
   'Ocean Map': oceanBasemap
 }
 
-L.control.layers(baseMapsCcSlr).addTo(mapCcSlr)
+L.control.layers(baseMapsSlr).addTo(mapCcSlr)
 
 let mapStyle = function (state) {
   let genderFemale = state.properties.FEMALES // female population
