@@ -2,7 +2,7 @@ let mapFour = L.map('drawMapFour').setView([38, -98], 4) // center of US coords
 var openStreetMap = L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
   maxZoom: 18,
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(mapFour)
+}).addTo(mapFour)S
 
 myStyle = function (state) {
   let genderFemale = state.properties.FEMALES // female population
