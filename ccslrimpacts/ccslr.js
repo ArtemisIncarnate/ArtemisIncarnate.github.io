@@ -62,7 +62,7 @@ let myFlPolygon = L.polygon([
 ], myFlPolygonStyle).addTo(mapCcSlr)
 
 myTampaMarker.bindPopup('Tampa, FL')
-myFlPolygon.bindPopup('The population of FL is densely populated by people of <br/>color who are at disproportionate risk of their white counterparts as the state faces coastal erosion due to climate change induced sea level rise.')
+myFlPolygon.bindPopup('The population of FL is densely populated by people of <br/>color who are at disproportionate risk for climate <br/>change impacts compared to their white counterparts as the state <br/>loses coastal areas to sea level rise.')
 
 let mapCcStyle = function (atriskpocstate) {
   let raceBlack = atriskpocstate.properties.BLACK
